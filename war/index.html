@@ -11,15 +11,14 @@
             var json = eval(request.responseText);
             var res = '';
             if (json.length == 1){
+            	res += '<tr><td>' + json[0].id +'</td></tr>';
                 res += '<tr><td>' + json[0].day +'</td></tr>';
                 res += '<tr><td>' + json[0].time +'</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
                     res += '<td> + json[i].time + '</td>' +
-                    '<td> + json[i].day + '</td>' +
-                    '<td><a href="edit.html?id=' + json[i].id + '">Edit</td>' +
-                    '<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
+                    '<td> + json[i].day + '</td>' </tr>
                 }
             }
             var obj = document.getElementById("datatable");
