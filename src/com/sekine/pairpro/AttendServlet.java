@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.*;
  
 import javax.jdo.*;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 
@@ -24,11 +25,16 @@ public class AttendServlet extends HttpServlet {
 	    protected void doPost(HttpServletRequest req,
 	            HttpServletResponse resp)
 	            throws ServletException, IOException {
+	    	resp.setCharacterEncoding("UTF-8");
+			resp.setContentType("text/html");
 	        req.setCharacterEncoding("UTF-8");
 	        String day = req.getParameter("day");
 	        double time = Double.parseDouble(req.getParameter("time"));
 	        //Date date = Calendar.getInstance().getTime();
-	   
+	     /*   ServletContext application = this.getServletContext();
+			application.setAttribute("day", day);
+			application.setAttribute("time", time);
+			*/
 	        Data data = new Data(day, time);
 	        PersistenceManagerFactory factory = PMF.get();
 	        PersistenceManager manager = factory.getPersistenceManager();

@@ -17,7 +17,7 @@
         <p>ログイン中</p><br>
         <br>
         勤務時間の情報を入力してください。<br>
-        
+     <table>   
         <form action="/attend" method="post">
             日付　　:<input type="text" name="day">
             　（例）1月1日→0101　と入力<br>
@@ -25,6 +25,7 @@
             　 15分刻みで入力してください。
             　（例）1時間30分→1.5　と入力<br>
             <input type="submit" value="登録">
-        </form>                
+        </form>    
+        </table>            
     </body>
 </html>

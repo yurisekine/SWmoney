@@ -15,6 +15,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	
 		<servlet>
 		<servlet-name>attend</servlet-name>
 		<servlet-class>com.sekine.pairpro.AttendServlet</servlet-class>
